@@ -1,6 +1,6 @@
 $.ajax({
     type: 'POST',
-    url: "https://www.xiaohao2333.top:25566/v1/verify-codes/captcha",
+    url: "https://www.xiaohao2333.top:30000/v1/verify-codes/captcha",
     data: {},
     dataType: 'JSON',
     success: function (jsondate) {
@@ -11,7 +11,7 @@ $.ajax({
         $('#btn').click(function(){
             $.ajax({
                 type: "POST",
-                url: "https://www.xiaohao2333.top:25566/v1/verify-codes/reg",
+                url: "https://www.xiaohao2333.top:30000/v1/verify-codes/reg",
                 data: {
                     name:$('#name').val(),
                     id:$('#id').val(),
