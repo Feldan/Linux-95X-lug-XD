@@ -6,7 +6,8 @@ $.ajax({
     success: function (jsondate) {
         let images = jsondate.data.captcha_image;
         let imagesId = jsondate.data.captcha_id;
-        let gender = parseInt($('#gender').val(),);
+        let gender = parseInt($("input:radio[name='sex']:checked").val());
+        console.log($("input:radio[name='sex']:checked").val());
         // console.log(jsondate.data.captcha_id)
         $("#captcha_image").attr('src', images);
 
