@@ -45,8 +45,10 @@ $.ajax({
                     codeid_err=status.responseJSON.errs.codeid
                     name_err=status.responseJSON.errs.name
                     phone_err=status.responseJSON.errs.phone
+                    $("#captcha_image").attr('alt', status + "失败");
                     $("#captcha_image").attr('src', 'https://passionpenguin.gitee.io/ARU/resources/ARU-6.6-PNG-S/PNG-S/0120.png');
                     alert("信息: " + JSON.stringify(errors));
+                    location.reload(true)
 
                 }
                 
@@ -58,5 +60,6 @@ $.ajax({
         // $("#captcha_image").attr('alt', status + ",验证码被玩坏了");
         $("#captcha_image").attr('src', 'https://passionpenguin.gitee.io/ARU/resources/ARU-6.6-PNG-S/PNG-S/2080.png');
         alert("信息: " + "😥8要再请求啦");
+        location.reload(true)
     }
 });
